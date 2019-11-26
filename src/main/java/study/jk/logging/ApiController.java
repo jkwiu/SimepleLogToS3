@@ -14,14 +14,16 @@ public class ApiController {
     }
 
     @GetMapping("log")
-    public void logging() throws IOException {
+    public String logging() throws IOException {
         LoggingService log = new LoggingService();
         log.logging();
+        return "Log generated!!!!";
     }
 
     @GetMapping("s3")
-    public void upload(){
+    public String upload(){
         S3Service s3 = new S3Service();
-        s3.uploadS3();
+        String str =s3.uploadS3();
+        return str;
     }
 }
