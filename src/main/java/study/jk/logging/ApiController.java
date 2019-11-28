@@ -20,10 +20,10 @@ public class ApiController {
         return "Log generated!!!!";
     }
 
-    @GetMapping("s3")
-    public String upload(){
-        S3Service s3 = new S3Service();
-        String str =s3.uploadS3();
-        return str;
-    }
+    // @GetMapping("s3")
+    // public String upload(){
+    //     S3Service s3 = new S3Service();
+    //     s3.uploadS3();
+    //     return "Uploading to S3 is Completed";
+    // }
 }
