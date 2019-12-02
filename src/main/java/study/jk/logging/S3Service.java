@@ -2,7 +2,6 @@ package study.jk.logging;
 
 import java.io.File;
 import java.nio.file.Paths;
-import java.util.Scanner;
 
 import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.services.s3.S3Client;
@@ -18,7 +17,7 @@ public class S3Service implements Runnable {
     }
 
 
-    @SuppressWarnings("InterruptedException")
+    
     @Override
     public void run() {
         
