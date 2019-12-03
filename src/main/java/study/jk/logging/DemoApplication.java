@@ -18,8 +18,8 @@ public class DemoApplication {
 		thread.start();
 		Scanner sc = new Scanner(System.in);
 		while(true){
-			String str = sc.nextLine();
-			if(str.equals(" ")){
+			String str = sc.next();
+			if(str.equals("p")){
 				thread.interrupt();
 				System.out.println("stoped!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 				break;
