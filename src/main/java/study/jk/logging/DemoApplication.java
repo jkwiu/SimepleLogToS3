@@ -1,7 +1,5 @@
 package study.jk.logging;
 
-import java.util.Scanner;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,23 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 
+	// http://localhost:8080/person/driver?firstName=kim&&lastName=sunwoo&&companyName=Samsung&&licenseNum=10101010&&phoneNumber=01012345678&&year=1986&&month=1&&day=2
+	// http://localhost:8080/person/student?firstName=kim&&lastName=sunwoo&&collegeName=SKY&&collegeNum=10101010&&phoneNumber=01012345678&&year=1986&&month=1&&day=2&&eduProgram=phd
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-
-
-		S3Service s3Service = new S3Service();
-		Thread thread = new Thread(s3Service);
-		thread.setDaemon(true);
-		thread.start();
-		Scanner sc = new Scanner(System.in);
-		while(true){
-			String str = sc.next();
-			if(str.equals("p")){
-				thread.interrupt();
-				System.out.println("stopped!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-				break;
-			}
-		}
-		sc.close();
 	}
 }

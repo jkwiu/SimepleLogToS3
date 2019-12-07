@@ -19,15 +19,16 @@ class DemoApplicationTests {
 		d.setDOB(1989, 11, 11);
 		d.setFirstName("kim");
 		d.setLastName("ys");
-		d.setLicenseNum(109109109);
+		d.setLicenseNum("0109109109");
 		d.setCompanyName("yello taxies");
 		d.drive();
+		
 
 		System.out.println("Date of Birth: " + d.getDOB());  
 		System.out.println("first name: " + d.getFirstName() + ", last name: " + d.getLastName());
 		System.out.println("Company Name: " + d.getCompanyName());
 		System.out.println("License Num: " + d.getLicenseNum());
-		System.out.println("number of legs: " + d.numberOfLegs);
+		System.out.println("number of legs: " + Driver.numberOfLegs);
 
 		Student s = new Student();
 
@@ -37,9 +38,10 @@ class DemoApplicationTests {
 		s.move();
 		s.move("home", "school");
 		s.setEduProgram("phd");
-		s.setCollegeNum(10101010);
+		s.setCollegeNum("010101010");
 		s.setCollegeName("sky");
 		s.study();
+		s.sleep();
 		
 		System.out.println("Date of Birth: " + s.getDOB());  
 		System.out.println("first name: " + s.getFirstName() + ", last name: " + s.getLastName());

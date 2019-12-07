@@ -2,7 +2,7 @@ package study.jk.logging.wio.person;
 
 public class Student extends Person {
 
-    private int collegeNum;
+    private String collegeNum;
     private String collegeName;
     private String eduProgram;
 
@@ -19,7 +19,7 @@ public class Student extends Person {
         System.out.println("Student is studying");
     }
 
-    public void setCollegeNum(int collegeNum){
+    public void setCollegeNum(String collegeNum){
         this.collegeNum = collegeNum;
     }
 
@@ -31,7 +31,7 @@ public class Student extends Person {
         this.eduProgram = eduProgram;
     }
 
-    public int getCollegeNum(){
+    public String getCollegeNum(){
         return collegeNum;
     }
 

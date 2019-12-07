@@ -2,7 +2,7 @@ package study.jk.logging.wio.person;
 
 public class Driver extends Person {
 
-    private int licenseNum;
+    private String licenseNum;
     private String companyName;
 
     @Override
@@ -14,7 +14,7 @@ public class Driver extends Person {
         System.out.println("Driver is driving.......");
     }
 
-    public void setLicenseNum(int licenseNum){
+    public void setLicenseNum(String licenseNum){
         this.licenseNum = licenseNum;
     }
 
@@ -22,7 +22,7 @@ public class Driver extends Person {
         this.companyName = companyName;
     }
 
-    public int getLicenseNum(){
+    public String getLicenseNum(){
         return licenseNum;
     }
 

@@ -2,13 +2,15 @@ package study.jk.logging.wio.person;
 
 import java.time.LocalDate;
 
+
 abstract class Person {
 
-    final public int numberOfLegs = 2;
+    final public static int numberOfLegs = 2;
     private String firstName;
     private String lastName;
-    private LocalDate dob;
-    private int phoneNumber;
+    private String dob;
+    private String phoneNumber;
+
 
     abstract void move();
 
@@ -28,16 +30,16 @@ abstract class Person {
         this.firstName = firstName;
     }
 
-    public void setLastName(String lastname){
-        this.lastName = lastname;
+    public void setLastName(String lastName){
+        this.lastName = lastName;
     }
 
     public void setDOB(int year, int month, int day){
         LocalDate dateOfBirth = LocalDate.of(year, month, day);
-        this.dob = dateOfBirth;
+        this.dob = dateOfBirth.toString();
     }
 
-    public void setPhoneNumber(int phoneNumber){
+    public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
 
@@ -49,11 +51,12 @@ abstract class Person {
         return lastName;
     }
 
-    public LocalDate getDOB(){
+    public String getDOB(){
         return dob;
     }
 
-    public int getPhoneNumber(){
+    public String getPhoneNumber(){
         return phoneNumber;
     }
+
 }
